@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Sidebar from './components/Siderbar'
-import logo from './logo.svg';
+import Routes from './routes'
 import './App.css';
 
 class App extends Component {
@@ -14,21 +14,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header navbar">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <header className="App-header">
           <Header></Header>
         </header>
+        <section className="App-content">
+          <div className="sidebar">
+            <Sidebar></Sidebar>
+          </div>
+          <div className="content">
+            <Routes></Routes>
+          </div>
+        </section>
+        <section className="App-footer">
+          <Footer></Footer>
+        </section>
       </div>
     )
   }
