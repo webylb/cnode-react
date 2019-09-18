@@ -13,9 +13,11 @@ class Home extends Component {
       tagType: ''
     }
   }
+
   componentWillMount() {
 
   }
+
   getPostData(type) {
     return axios.get('https://cnodejs.org/api/v1/topics',{
       params: {
@@ -23,6 +25,7 @@ class Home extends Component {
       }
     })
   }
+
   tabTypes(post) {
     const tab = post.tab
     const map = {
@@ -40,6 +43,9 @@ class Home extends Component {
       return map[tab];
     }
   }
+
+  
+
 }
 
 export default Home;
