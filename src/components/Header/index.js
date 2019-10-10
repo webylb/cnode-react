@@ -12,27 +12,25 @@ const routeList = [
 ];
 
 const Header = () => (
-  
-  <div className="navbar">
+  <div className="header-wrapper navbar-inner">
     <Link to="/" className="brand">
       <img src={ logo } className="logo" alt="logo" />
     </Link>
-    <form className="search-form" action="https://www.baidu.com/?wd=">
-      <input type="text" name="q" className="search-query"/>
+    <form id="search_form" className="navbar-search" action="http://www.baidu.com">
+        <input type="text" id="q" name="q" className="search-query span3" />
     </form>
-    <ul className="nav-list">
-      {
-        routeList.map(route => {
-          return (
-            <li key={ route.path }>
-              <Link to={ route.path }>{ route.label }</Link>
-            </li>
-          )
-        })
-      }
+    <ul className="nav pull-right">
+      {routeList.map(route => {
+        return (
+          <li key={route.path}>
+            <Link to={route.path}>
+              {route.label}
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   </div>
-  
 )
 
 export default Header;

@@ -6,7 +6,7 @@ import {
   Switch
 } from 'react-router-dom';
 import './index.css';
-import 'antd/dist/antd.less';
+import 'antd/dist/antd.css';
 import App from './App';
 import NotFound from './components/NotFound';
 import Login from './components/Login';
@@ -16,6 +16,7 @@ ReactDOM.render((
   <Router>
     <Switch>
       <Route exact path="/" component={ App }></Route>
+      <Route path="/tag" component={App}></Route>
       <Route exact path="/login" component={ Login }></Route>
       <Route exact path="/404" component={ NotFound }></Route>
       <Route component={ NotFound }></Route>

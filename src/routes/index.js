@@ -11,6 +11,7 @@ class ChildRoute extends Component {
     return (
       <Switch>
         <Route exact path="/" component={ Home }></Route>
+        <Route exact path="/tag/:type" component={Home}></Route>
         <Route render={() => (<Redirect to='/404'></Redirect>)}></Route>
       </Switch>
     )
